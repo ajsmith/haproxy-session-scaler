@@ -2,7 +2,11 @@
 Examples
 ========
 
-HAProxxy Session Data::
+To query HAProxy session data using curl, we'd do run a command like::
+
+    $ curl -u admin:adminpw "infranode1-e871.oslab.opentlc.com:1936/haproxy-stats;csv"
+
+Below is some sample HAProxxy Session Data from such a command::
 
     >>> session_data = """\
     ... # pxname,svname,qcur,qmax,scur,smax,slim,stot,bin,bout,dreq,dresp,ereq,econ,eresp,wretr,wredis,status,weight,act,bck,chkfail,chkdown,lastchg,downtime,qlimit,pid,iid,sid,throttle,lbtot,tracked,type,rate,rate_lim,rate_max,check_status,check_code,check_duration,hrsp_1xx,hrsp_2xx,hrsp_3xx,hrsp_4xx,hrsp_5xx,hrsp_other,hanafail,req_rate,req_rate_max,req_tot,cli_abrt,srv_abrt,comp_in,comp_out,comp_byp,comp_rsp,lastsess,last_chk,last_agt,qtime,ctime,rtime,ttime,
@@ -19,9 +23,7 @@ HAProxxy Session Data::
     ... openshift_default,BACKEND,0,0,0,1,600,1,109,103,0,0,,1,0,0,0,UP,0,0,0,,0,5353,0,,1,9,0,,0,,1,0,,1,,,,0,0,0,0,1,0,,,,,0,0,0,0,0,0,-1,,,0,0,0,0,
     ... """
 
-
 Nothing is implemented yet. Fail.
 
     >>> import haproxy_session_scaler
     >>> haproxy_session_scaler.scale()
-
