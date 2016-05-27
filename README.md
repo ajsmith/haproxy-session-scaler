@@ -40,5 +40,7 @@ following environment variables on the container:
 To run with plain ol' Docker:
 
 ```.shell
-docker run -e PROJECT_PROXY_NAME=myproject -e HAPROXY_STATS_URL=http://haproxy.localdomain:1936/haproxy-stats;csv haproxy-session-scaler
+docker run -e PROJECT_PROXY_NAME=myproject \
+  -e HAPROXY_STATS_URL=http://haproxy.localdomain:1936/haproxy-stats;csv \
+  haproxy-session-scaler
 ```
