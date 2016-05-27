@@ -8,7 +8,7 @@ HAProxy.
 To run the tests:
 
 ```.shell
-python -m doctest haproxy_session_scaler.rst
+python -m doctest -v haproxy_session_scaler.rst
 ```
 
 # Building with S2I
