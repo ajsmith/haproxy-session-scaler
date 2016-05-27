@@ -26,4 +26,5 @@ Below is some sample HAProxxy Session Data from such a command::
 Nothing is implemented yet. Fail.
 
     >>> import haproxy_session_scaler
-    >>> haproxy_session_scaler.scale()
+    >>> haproxy_session_scaler.scale('openshift_default', session_data)
+    1
