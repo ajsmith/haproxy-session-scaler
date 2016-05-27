@@ -10,3 +10,13 @@ To run the tests:
 ```.shell
 python -m doctest haproxy_session_scaler.rst
 ```
+
+# Building with S2I
+
+To build with S2I:
+
+```.shell
+s2i build https://github.com/ajsmith/haproxy-session-scaler.git \
+  openshift3/python-33-rhel7 \
+  myproject/haproxy-session-scaler
+```
